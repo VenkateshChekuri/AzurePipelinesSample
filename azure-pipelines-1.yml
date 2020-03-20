@@ -45,10 +45,10 @@ steps:
 - task: ExtractFiles@1
   inputs:
     archiveFilePatterns: '$(build.artifactStagingDirectory)\*.zip'
-    destinationFolder: 'Build.StagingDirectory'    
+    destinationFolder: '$(build.StagingDirectory)'    
 - task: CopyFiles@2
   inputs:
-    SourceFolder: '$(Build.ArtifactStagingDirectory)'
+    SourceFolder: '$(build.StagingDirectory)'
     Contents: '**'
     CleanTargetFolder: true
     TargetFolder: 'C:\Work\AzureSites\SampleWebApp3'
