@@ -45,5 +45,5 @@ steps:
 - task: CopyFiles@2
   inputs:
     SourceFolder: '$(Build.ArtifactStagingDirectory)'
-    Contents: '**'
+    Contents: '**\obj\Release**'
     TargetFolder: 'C:\Work\AzureSites\SampleWebApp3'
