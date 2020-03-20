@@ -44,7 +44,7 @@ steps:
 #     publishLocation: 'Container'
 - task: ExtractFiles@1
   inputs:
-    archiveFilePatterns: '*.zip'
+    archiveFilePatterns: '$(Build.ArtifactStagingDirectory)\*.zip'
     destinationFolder: '$(Build.ArtifactStagingDirectory)'
     cleanDestinationFolder: true
 - task: CopyFiles@2
