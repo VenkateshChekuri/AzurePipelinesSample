@@ -46,4 +46,5 @@ steps:
   inputs:
     SourceFolder: '$(Build.ArtifactStagingDirectory)'
     Contents: '**\obj\Release**'
+    CleanTargetFolder: true
     TargetFolder: 'C:\Work\AzureSites\SampleWebApp3'
