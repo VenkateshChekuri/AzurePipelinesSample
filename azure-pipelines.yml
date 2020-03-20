@@ -46,4 +46,4 @@ steps:
     azureSubscription: 'Free Trial(290d45f3-fd2e-4114-bcb2-33a23846c0e6)'
     appType: 'webApp'
     WebAppName: 'AzurepipelinesSample'
-    packageForLinux: '$(System.DefaultWorkingDirectory)/**/*.zip'
+    packageForLinux: '$(Build.ArtifactStagingDirectory)/**/*.nupkg'
