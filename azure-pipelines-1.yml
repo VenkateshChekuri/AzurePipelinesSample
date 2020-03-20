@@ -45,8 +45,7 @@ steps:
 - task: ExtractFiles@1
   inputs:
     archiveFilePatterns: '$(build.artifactStagingDirectory)\*.zip'
-    destinationFolder: '$(Build.ArtifactStagingDirectory)'
-    cleanDestinationFolder: true
+    destinationFolder: '$(Build.ArtifactStagingDirectory)'    
 - task: CopyFiles@2
   inputs:
     SourceFolder: '$(Build.ArtifactStagingDirectory)'
