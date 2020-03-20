@@ -42,6 +42,11 @@ steps:
 #     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
 #     ArtifactName: 'drop'
 #     publishLocation: 'Container'
+- task: ExtractFiles@1
+  inputs:
+    archiveFilePatterns: '*.zip'
+    destinationFolder: '$(Build.ArtifactStagingDirectory)'
+    cleanDestinationFolder: true
 - task: CopyFiles@2
   inputs:
     SourceFolder: '$(Build.ArtifactStagingDirectory)'
