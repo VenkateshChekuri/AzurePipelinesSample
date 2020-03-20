@@ -29,16 +29,6 @@ steps:
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
 
-- task: VSTest@2
-  inputs:
-    platform: '$(buildPlatform)'
-    configuration: '$(buildConfiguration)'
-- task: NuGetCommand@2
-  inputs:
-    command: 'pack'
-    packagesToPack: '**/*.csproj'
-    versioningScheme: 'off'
-
 
 - task: AzureRmWebAppDeployment@4
   inputs:
@@ -46,4 +36,4 @@ steps:
     azureSubscription: 'Free Trial(290d45f3-fd2e-4114-bcb2-33a23846c0e6)'
     appType: 'webApp'
     WebAppName: 'AzurepipelinesSample'
-    packageForLinux: '$(Build.ArtifactStagingDirectory)/**/*.nupkg'
+    packageForLinux: '$(Build.ArtifactStagingDirectory)/**/*.zip'
