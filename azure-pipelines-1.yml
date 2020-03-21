@@ -49,6 +49,6 @@ steps:
 - task: CopyFiles@2
   inputs:
     SourceFolder: 'Build.StagingDirectory'
-    Contents: '**\PackageTmp**'
+    Contents: '**\Content\C_C\agent\_work\6\s\AzurePipelinesSample\AzurePipelinesSample\obj\Release**'
     CleanTargetFolder: true
     TargetFolder: 'C:\Work\AzureSites\SampleWebApp3'
