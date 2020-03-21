@@ -48,7 +48,7 @@ steps:
     destinationFolder: 'Build.StagingDirectory'    
 - task: CopyFiles@2
   inputs:
-    SourceFolder: '$(build.StagingDirectory)'
+    SourceFolder: 'Build.StagingDirectory'
     Contents: '**'
     CleanTargetFolder: true
     TargetFolder: 'C:\Work\AzureSites\SampleWebApp3'
